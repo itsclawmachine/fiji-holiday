@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Surprise For You 💕</title>
+    <title>Happy Birthday Scoots 💕</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -36,6 +36,43 @@
 
         .script {
             font-family: 'Great Vibes', cursive;
+        }
+
+        /* Birthday Note Banner */
+        .birthday-note {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .birthday-note .script {
+            font-size: 3.5rem;
+            color: var(--rose);
+            display: block;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+        }
+
+        .birthday-note .message {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 2;
+            color: #444;
+            background: rgba(255,255,255,0.7);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .birthday-note .signature {
+            margin-top: 25px;
+            font-size: 1.8rem;
+            color: var(--rose);
+        }
+
+        .birthday-note .signature .script {
+            font-size: 2rem;
         }
 
         /* Opening Section - The Big Reveal */
@@ -312,7 +349,11 @@
             text-align: center;
         }
 
-        .activity-card-header.kids {
+        .activity-card-header.haz {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .activity-card-header.squiggle {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
 
@@ -328,6 +369,12 @@
             font-size: 1.5rem;
         }
 
+        .activity-card-header .age-note {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
         .activity-card-body {
             padding: 30px;
         }
@@ -340,13 +387,45 @@
             padding: 12px 0;
             border-bottom: 1px dashed #eee;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 12px;
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
         .activity-card-body li:last-child {
             border-bottom: none;
+        }
+
+        .activity-card-body li .emoji {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .activity-card-body li .activity-text {
+            flex: 1;
+        }
+
+        .activity-card-body li .age-tag {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 5px;
+            white-space: nowrap;
+        }
+
+        .age-tag.both {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .age-tag.haz-only {
+            background: #e8eaf6;
+            color: #3949ab;
+        }
+
+        .age-tag.squiggle-fave {
+            background: #fce4ec;
+            color: #c2185b;
         }
 
         /* Day by Day */
@@ -452,6 +531,60 @@
             margin-bottom: 10px;
         }
 
+        /* Kids Notes Section */
+        .kids-notes {
+            background: linear-gradient(135deg, #e8f5e9 0%, #fff 100%);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .kids-notes h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .kids-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .kid-box {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .kid-box h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .kid-box ul {
+            list-style: none;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .kid-box li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .kid-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+        }
+
         /* Final Section */
         .final-section {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -518,10 +651,36 @@
             .anniversary-plans {
                 gap: 20px;
             }
+
+            .birthday-note .script {
+                font-size: 2.5rem;
+            }
+
+            .birthday-note .message {
+                padding: 25px;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Birthday Note -->
+    <div class="birthday-note">
+        <span class="script">Happy Birthday Scoots 🎂</span>
+        <div class="message">
+            I know there's been lots going on.
+            <br><br>
+            You mean the world to me and the monkeys.
+            <br><br>
+            So maybe we should go and show them some of this...
+            <br><br>
+            <span style="font-size: 2rem;">↓</span>
+        </div>
+        <div class="signature">
+            <span class="script">Love, Dad</span> ❤️
+        </div>
+    </div>
 
     <!-- Opening Reveal -->
     <section class="reveal-section">
@@ -541,7 +700,7 @@
         <h2>FIJI! 🌴</h2>
         <div class="destination-emoji">🏝️ 🌊 ☀️ 🐠 🌺</div>
         <div class="trip-dates">
-            7 nights in paradise
+            7 nights in paradise with Haz & Squiggle Rat
             <strong>September 20 - 27, 2026</strong>
         </div>
         <p style="max-width: 500px; color: #666; margin-top: 20px;">
@@ -571,9 +730,9 @@
                     <p>Our own Fijian beach hut with ocean views</p>
                 </div>
                 <div class="resort-feature">
-                    <div class="icon">👧👦</div>
+                    <div class="icon">🌳</div>
                     <h3>Tia's Treehouse</h3>
-                    <p>Amazing kids club (8am-8pm) so we get time too!</p>
+                    <p>Kids club (8am-8pm) — perfect for both Haz & Squiggle!</p>
                 </div>
                 <div class="resort-feature">
                     <div class="icon">🤿</div>
@@ -587,6 +746,35 @@
                 </div>
             </div>
         </div>
+
+        <!-- Kids Activity Notes -->
+        <div class="kids-notes">
+            <h3>🧒 Perfect For Our Monkeys</h3>
+            <div class="kids-grid">
+                <div class="kid-box">
+                    <h4>👦 Haz <span style="font-weight: normal; font-size: 0.9rem; color: #666;">(Junior School, 7)</span></h4>
+                    <ul>
+                        <li>Old enough for guided snorkeling safaris</li>
+                        <li>Can try junior scuba intro (Bubble Maker)</li>
+                        <li>Kayaking & paddleboarding ready</li>
+                        <li>Will love the fishing trips</li>
+                        <li>Cultural activities & village visits</li>
+                        <li>Independent enough for full-day treehouse</li>
+                    </ul>
+                </div>
+                <div class="kid-box">
+                    <h4>👧 Squiggle Rat <span style="font-weight: normal; font-size: 0.9rem; color: #666;">(Kindy, 4)</span></h4>
+                    <ul>
+                        <li>Shallow pool & beach play — her heaven!</li>
+                        <li>Treehouse has dedicated kindy activities</li>
+                        <li>Shell hunting on the beach</li>
+                        <li>Fish feeding from the jetty</li>
+                        <li>Arts, crafts & coconut bowling</li>
+                        <li>Gentle snorkeling in shallow lagoon</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Personal Message -->
@@ -594,11 +782,11 @@
         <p class="script">Why this trip?</p>
         <p>
             Ten years ago, we started this incredible journey together. 
-            Through everything — the adventures, the challenges, raising our beautiful kids — 
+            Through everything — the adventures, the challenges, raising our beautiful monkeys — 
             you've been my partner, my best friend, my everything.
             <br><br>
             This trip is for <em>us</em>. Time to relax, reconnect, and make magical memories 
-            with the kids in one of the most beautiful places on Earth.
+            with Haz and Squiggle Rat in one of the most beautiful places on Earth.
             <br><br>
             You deserve this. <em>We</em> deserve this. 💕
         </p>
@@ -611,55 +799,173 @@
         
         <div class="activity-row">
             <div class="activity-card">
-                <div class="activity-card-header kids">
-                    <h3>👧👦 For The Kids</h3>
+                <div class="activity-card-header haz">
+                    <h3>👦 Haz Adventures</h3>
+                    <div class="age-note">Great for junior schoolers</div>
                 </div>
                 <div class="activity-card-body">
                     <ul>
-                        <li>🏠 Tia's Treehouse Kids Club</li>
-                        <li>🏊 Pool & beach swimming all day</li>
-                        <li>🤿 Kids snorkeling safari</li>
-                        <li>🐚 Shell hunting adventures</li>
-                        <li>🎨 Fijian arts & crafts</li>
-                        <li>🥥 Coconut bowling</li>
-                        <li>🎣 Junior fishing trip</li>
-                        <li>🐠 Fish feeding at the jetty</li>
+                        <li>
+                            <span class="emoji">🤿</span>
+                            <span class="activity-text">Guided snorkeling safari — see turtles!</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🫧</span>
+                            <span class="activity-text">Bubble Maker scuba intro (ages 5+)</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🎣</span>
+                            <span class="activity-text">Junior fishing trip</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🏄</span>
+                            <span class="activity-text">Stand-up paddleboarding</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🛶</span>
+                            <span class="activity-text">Kayak adventures</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🏘️</span>
+                            <span class="activity-text">Fijian village visit & cultural experience</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🚤</span>
+                            <span class="activity-text">Glass bottom boat tour</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🌴</span>
+                            <span class="activity-text">Nature treasure hunts</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-card-header squiggle">
+                    <h3>👧 Squiggle Rat Fun</h3>
+                    <div class="age-note">Perfect for kindy kids</div>
+                </div>
+                <div class="activity-card-body">
+                    <ul>
+                        <li>
+                            <span class="emoji">🏊</span>
+                            <span class="activity-text">Pool splash time — shallow areas!</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🏠</span>
+                            <span class="activity-text">Tia's Treehouse kindy program</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🐚</span>
+                            <span class="activity-text">Shell hunting on the beach</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🐠</span>
+                            <span class="activity-text">Fish feeding at the jetty</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🎨</span>
+                            <span class="activity-text">Arts & crafts (Fijian style!)</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🥥</span>
+                            <span class="activity-text">Coconut bowling</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🏖️</span>
+                            <span class="activity-text">Sandcastle building</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🤿</span>
+                            <span class="activity-text">Gentle lagoon snorkel (shallow water)</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <div class="activity-card">
                 <div class="activity-card-header together">
-                    <h3>👨‍👩‍👧‍👦 Together As A Family</h3>
+                    <h3>👨‍👩‍👧‍👦 All Together</h3>
+                    <div class="age-note">Family fun for everyone</div>
                 </div>
                 <div class="activity-card-body">
                     <ul>
-                        <li>🚤 Glass bottom boat tour</li>
-                        <li>🤿 Family snorkeling trip</li>
-                        <li>🛶 Kayaking the lagoon</li>
-                        <li>🏄 Stand-up paddleboarding</li>
-                        <li>🏘️ Visit a Fijian village</li>
-                        <li>🎭 Traditional Meke show</li>
-                        <li>🌅 Sunset cruise</li>
-                        <li>⭐ Stargazing on the beach</li>
+                        <li>
+                            <span class="emoji">🚤</span>
+                            <span class="activity-text">Glass bottom boat — no swimming needed!</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🌅</span>
+                            <span class="activity-text">Sunset cruise</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🎭</span>
+                            <span class="activity-text">Traditional Meke show</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🏖️</span>
+                            <span class="activity-text">Beach days & swimming</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🛶</span>
+                            <span class="activity-text">Family kayaking (Squiggle rides with us!)</span>
+                        </li>
+                        <li>
+                            <span class="emoji">⭐</span>
+                            <span class="activity-text">Stargazing on the beach</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🥥</span>
+                            <span class="activity-text">Coconut cracking demo</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🍽️</span>
+                            <span class="activity-text">Family dinners with ocean views</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <div class="activity-card">
                 <div class="activity-card-header romance">
-                    <h3>💕 Just The Two Of Us</h3>
+                    <h3>💕 Just Us Two</h3>
+                    <div class="age-note">While monkeys are at Treehouse!</div>
                 </div>
                 <div class="activity-card-body">
                     <ul>
-                        <li>🌹 Romantic beach dinner</li>
-                        <li>💆 Couples spa massage</li>
-                        <li>🥂 Sunset champagne</li>
-                        <li>🏊 Adults-only pool time</li>
-                        <li>🍽️ Fine dining (kids at club!)</li>
-                        <li>🚣 Private kayak to sandbar</li>
-                        <li>📸 Anniversary photos</li>
-                        <li>🌙 Moonlit beach walk</li>
+                        <li>
+                            <span class="emoji">🌹</span>
+                            <span class="activity-text">Romantic beach dinner</span>
+                        </li>
+                        <li>
+                            <span class="emoji">💆</span>
+                            <span class="activity-text">Couples spa massage</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🥂</span>
+                            <span class="activity-text">Sunset champagne</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🏊</span>
+                            <span class="activity-text">Adults-only pool time</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🍽️</span>
+                            <span class="activity-text">Fine dining (kids at club!)</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🚣</span>
+                            <span class="activity-text">Private kayak to sandbar</span>
+                        </li>
+                        <li>
+                            <span class="emoji">📸</span>
+                            <span class="activity-text">Anniversary photos</span>
+                        </li>
+                        <li>
+                            <span class="emoji">🌙</span>
+                            <span class="activity-text">Moonlit beach walk</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -686,9 +992,9 @@
                 <div class="day-number">Day 2 • Sunday</div>
                 <h3>🏊 Beach Day</h3>
                 <ul class="day-highlights">
-                    <li>☀️ Pool & beach time</li>
-                    <li>🏠 Kids try the treehouse</li>
-                    <li>🤿 First snorkel</li>
+                    <li>☀️ Pool & beach with the monkeys</li>
+                    <li>🏠 Kids try the Treehouse</li>
+                    <li>🤿 First family snorkel</li>
                 </ul>
             </div>
 
@@ -696,8 +1002,8 @@
                 <div class="day-number" style="color: var(--rose);">Day 3 • Monday</div>
                 <h3>💕 Anniversary Day</h3>
                 <ul class="day-highlights">
-                    <li>👧👦 Kids at Treehouse</li>
-                    <li>💆 Couples spa</li>
+                    <li>🏠 Haz & Squiggle at Treehouse</li>
+                    <li>💆 Couples spa for us</li>
                     <li>🌹 Beach dinner for two</li>
                 </ul>
             </div>
@@ -706,7 +1012,7 @@
                 <div class="day-number">Day 4 • Tuesday</div>
                 <h3>🏝️ Island Adventure</h3>
                 <ul class="day-highlights">
-                    <li>🚤 Glass bottom boat</li>
+                    <li>🚤 Glass bottom boat (all ages!)</li>
                     <li>🛶 Family kayaking</li>
                     <li>🎭 Evening Meke show</li>
                 </ul>
@@ -717,7 +1023,7 @@
                 <h3>🏘️ Culture Day</h3>
                 <ul class="day-highlights">
                     <li>🏘️ Village visit</li>
-                    <li>🏄 Paddleboarding</li>
+                    <li>🏄 Haz tries paddleboarding</li>
                     <li>🌅 Sunset cruise</li>
                 </ul>
             </div>
@@ -726,8 +1032,8 @@
                 <div class="day-number">Day 6 • Thursday</div>
                 <h3>🐢 Snorkel Safari</h3>
                 <ul class="day-highlights">
-                    <li>🤿 Find the turtles!</li>
-                    <li>🥥 Beach picnic</li>
+                    <li>🤿 Find the turtles! (Haz)</li>
+                    <li>🐚 Shell hunting (Squiggle)</li>
                     <li>⭐ Stargazing</li>
                 </ul>
             </div>
@@ -736,8 +1042,8 @@
                 <div class="day-number">Day 7 • Friday</div>
                 <h3>🎣 Last Full Day</h3>
                 <ul class="day-highlights">
-                    <li>🎣 Fishing (kids)</li>
-                    <li>💆 Spa time (you!)</li>
+                    <li>🎣 Fishing trip (Haz)</li>
+                    <li>💆 Spa time for you!</li>
                     <li>🍽️ Final family dinner</li>
                 </ul>
             </div>
@@ -758,7 +1064,7 @@
     <div class="anniversary-card">
         <span class="script">For Our Anniversary</span>
         <h2>A Special Day Just For Us</h2>
-        <p>While the kids have the time of their lives at the treehouse...</p>
+        <p>While Haz & Squiggle Rat have the time of their lives at the treehouse...</p>
         
         <div class="anniversary-plans">
             <div class="anniversary-plan">
@@ -791,7 +1097,7 @@
     <!-- Footer -->
     <footer>
         <div class="hearts">💕</div>
-        <p>Happy 10 Year Anniversary</p>
+        <p>Happy Birthday & Happy 10 Year Anniversary</p>
         <p style="margin-top: 10px; font-size: 0.9rem;">With all my love ❤️</p>
     </footer>
 
